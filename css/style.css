@@ -1,0 +1,40 @@
+.login-form{
+	border: 1px solid #c0392b;
+	padding: 10px;
+}
+
+.new-account
+{
+    display: block;
+    margin-top: 10px;
+}
+
+@media(max-width:767px){
+	.login{
+		border: 1px solid #c0392b;
+		width: 100%;
+
+	}
+	.login-head{
+		height: 50px;
+		background-color: #c0392b;
+	}
+	.login-head h1{
+		color: #FFFFFF;
+		font-size: 28px;
+		margin-top: 10px;
+	}
+	.login-form{
+	}
+}
+
+@media(min-width:768px){
+
+}
+
+@media(min-width:992px){
+
+}
+@media(min-width:1200px){
+
+}
