@@ -22,29 +22,46 @@
 	<div class="container login" id="login">
 		<div class="row">
 			<div class="col-xs-12 login-head">
-				<h1> Login </h1>
+				<h1> Registre-se </h1>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-xs-12 login-form">
 				<form class="form-signin" id="formID" method="post" action="">
 					<div class="form-group">
-						<label for="inputlogin">Login</label>
-						<input type="text" class="form-control" name="username" id="cnpj"/> 
-					</div>	
-					<div class="form-group">
-						<label for="inputpass">Senha</label>
-						<input type="password" class="form-control" name="password" id="pass" maxlength="8" /> 
+						<label for="inputlogin">Nome*</label>
+						<input type="text" class="form-control" name="name" id="name" required/> 
 					</div>
 					<div class="form-group">
-						<button type="submit" class="btn btn-default col-xs-12" name="login">Logar</button>
+						<label for="inputlogin">Razão Social*</label>
+						<input type="text" class="form-control" name="razao" id="razao" required/> 
+					</div>
+					<div class="form-group">
+						<label for="inputlogin">CNPJ*</label>
+						<input type="text" class="form-control" name="username" id="cnpj" required/> 
+					</div>
+					<div class="form-group">
+						<label for="inputlogin">E-mail*</label>
+						<input type="email" class="form-control" name="email" id="email" required/> 
+					</div>
+					<div class="form-group">
+						<label for="inputlogin">Telefone*</label>
+						<input type="text" class="form-control" name="telefone" id="telefone" required/> 
+					</div>
+
+					<div class="form-group">
+						<label for="inputpass">Senha</label>
+						<input type="password" class="form-control" name="password" id="pass" maxlength="8" required /> 
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-default col-xs-12" name="cadastro">Solicitar Cadastro</button>
 					<?php 
-						if(!(isset($_POST['login']))){
+						if(!(isset($_POST['cadastro']))){
 							echo $_POST['username'];
 						}else{
 							$usr = new Users;
 							$usr->storeFormValues($_POST);
-							if($usr->userLogin()) { ?>
+							if($usr->userRegister()) { ?>
 								<span class="pull-left">Bem-vindo</span> <?php	
 							}else{?>
 								<span class="pull-left">Usuário/Senha Incorretos</span><?php
