@@ -1,6 +1,12 @@
+/* INDEX.PHP */
+
 .login-form{
 	border: 1px solid #c0392b;
-	padding: 10px;
+	padding: 10px 10px 0 10px;
+}
+.register-form{
+	border: 1px solid #c0392b;
+	padding: 10px 10px 0 10px;
 }
 
 .new-account
@@ -8,15 +14,18 @@
     display: block;
     margin-top: 10px;
 }
+/* INDEX.PHP */
 
 @media(max-width:767px){
+	/* INDEX.PHP */
 	.login{
 		border: 1px solid #c0392b;
 		width: 100%;
 
 	}
 	.login-head{
-		height: 50px;
+		padding-top:12px;
+		height: 60px;
 		background-color: #c0392b;
 	}
 	.login-head h1{
@@ -26,6 +35,55 @@
 	}
 	.login-form{
 	}
+	/* INDEX.PHP */
+	/* REGISTER.PHP */
+	.register{
+	border: 1px solid #c0392b;
+	width: 100%;
+
+	}
+	.register-head{
+		padding-top:0px;
+		height: 60px;
+		background-color: #c0392b;
+	}
+	.register-head h1{
+		color: #FFFFFF;
+		font-size: 28px;
+	}
+	.login-form{
+	}
+	/* REGISTER.PHP */
+	/* HOME.PHP */
+	.home-head{
+		background-color: #393939;
+	}
+
+	.form-search{
+		color: #FFFFFF;
+	}
+	#search {
+		margin-top:50px;
+	}
+	.home-menu{
+		padding: 5px;
+		border-top:1px solid #fff;
+		background-color: #393939;	
+	}
+	.home-content{
+		padding:1px;
+		margin-top: 1px;
+		background-color: #393939;	
+	}
+	.product-image{
+		border-right: 1px solid #fff;
+	}
+	.product-info{
+		margin-top:15px;
+		color: #ffffff;
+
+	}
+	/* HOME.PHP */
 }
 
 @media(min-width:768px){

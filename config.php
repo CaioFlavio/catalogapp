@@ -1,6 +1,6 @@
 <?php
 	### DESABILITA ERROS ###
-	error_reporting(0);
+	error_reporting(1);
 
 	define("DB_DSN", "mysql:host=localhost;dbname=app"); // CONNECTION STRING
 	define("DB_USERNAME", "root"); //DATABASE USERNAME

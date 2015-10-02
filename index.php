@@ -14,11 +14,8 @@
 	<script src="js/jquery.maskedinput.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
-
-	<script type="text/javascript">
-	</script>
 </head>
-<body style="vertical-align:middle;">
+<body>
 	<div class="container login" id="login">
 		<div class="row">
 			<div class="col-xs-12 login-head">
@@ -45,7 +42,7 @@
 							$usr = new Users;
 							$usr->storeFormValues($_POST);
 							if($usr->userLogin()) { ?>
-								<span class="pull-left">Bem-vindo</span> <?php	
+								<span class="pull-left"><?php header("location:home.php") ?></span> <?php	
 							}else{?>
 								<span class="pull-left">Usuário/Senha Incorretos</span><?php
 							}
