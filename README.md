@@ -5,6 +5,6 @@ V0.1
 --Added login and register layout
 
 v0.2
---Added login, register functions
---Added home layout
---Add Ajax home search
+--Added login, register functions <br>
+--Added home layout <br>
+--Add Ajax home search <br>
