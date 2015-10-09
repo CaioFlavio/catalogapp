@@ -1,3 +1,27 @@
+.vertical-align {
+  display: flex;
+  flex-direction: row;
+}
+
+.vertical-align > [class^="col-"],
+.vertical-align > [class*=" col-"] {
+  display: flex;
+  align-items: center;
+
+}
+
+/**
+ *  Do NOT include this part into your stylesheet.
+ *  "flex: 1" or "flex-grow: 1" is added to make the inner div
+ *  - Which is also a flex-item - take up all the horizontal space
+ *  available space inside the flex container (.col-* elements)
+ */
+.vertical-align > [class^="col-"] > div,
+.vertical-align > [class*=" col-"] > div {
+  /* flex: 1; */
+  flex-grow: 1;
+}
+
 /* INDEX.PHP */
 
 .login-form{
@@ -65,6 +89,9 @@
 	#search {
 		margin-top:50px;
 	}
+	.welcome{
+		color: #ffffff;
+	}
 	.home-menu{
 		padding: 5px;
 		border-top:1px solid #fff;
@@ -76,12 +103,15 @@
 		background-color: #393939;	
 	}
 	.product-image{
-		border-right: 1px solid #fff;
+		background-color: #393939;
+		border-right: 1px solid #ffffff;
 	}
 	.product-info{
-		margin-top:15px;
-		color: #ffffff;
-
+		color:#ffffff;
+		border-right: 1px solid #ffffff;
+	}
+	.add-to-cart{
+		 justify-content: center; 
 	}
 	/* HOME.PHP */
 }

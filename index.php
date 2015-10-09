@@ -1,5 +1,9 @@
 <?php 
 	include_once("config.php");
+	session_start();
+	if(isset($_SESSION['user'])){
+		header("location:home.php");
+	}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -37,14 +41,14 @@
 						<button type="submit" class="btn btn-default col-xs-12" name="login">Logar</button>
 					<?php 
 						if(!(isset($_POST['login']))){
-							echo $_POST['username'];
+						
 						}else{
 							$usr = new Users;
 							$usr->storeFormValues($_POST);
 							if($usr->userLogin()) { ?>
-								<span class="pull-left"><?php header("location:home.php") ?></span> <?php	
-							}else{?>
-								<span class="pull-left">Usuário/Senha Incorretos</span><?php
+								<span class="pull-left"><?php header("location:home.php") ?></span><?php
+							}else{ ?>
+								<span class="pull-left">Usuário/Senha Incorretos.</span><?php
 							}
 						}
 					?>

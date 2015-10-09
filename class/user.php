@@ -38,8 +38,13 @@
 				$stmt->bindValue("password", hash("md5", $this->password), PDO::PARAM_STR);
 				$stmt->execute();
 				$valid = $stmt->fetchColumn();
+				
 				if($valid){
-					$success = true;
+					session_start();
+					$_SESSION['user'] = $_POST['username'];
+					if(isset($_SESSION['user'])){				
+						$success = true;
+					}
 				}
 				$conn = null;
 				return $success;
